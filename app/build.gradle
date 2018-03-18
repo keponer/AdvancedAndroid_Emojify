@@ -31,4 +31,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     // TODO (1): Add Timber dependency
     testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton.timber:timber:4.6.1'
+
 }

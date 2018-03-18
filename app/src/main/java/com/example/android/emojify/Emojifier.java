@@ -28,6 +28,8 @@ import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.face.Face;
 import com.google.android.gms.vision.face.FaceDetector;
 
+import timber.log.Timber;
+
 class Emojifier {
 
     // TODO (3): Change all Log statements to Timber logs and remove the LOG_TAG variable
@@ -134,12 +136,13 @@ class Emojifier {
 
     private static Emoji whichEmoji(Face face) {
         // Log all the probabilities
-        Log.d(LOG_TAG, "whichEmoji: smilingProb = " + face.getIsSmilingProbability());
+        /*Log.d(LOG_TAG, "whichEmoji: smilingProb = " + face.getIsSmilingProbability());
         Log.d(LOG_TAG, "whichEmoji: leftEyeOpenProb = "
                 + face.getIsLeftEyeOpenProbability());
         Log.d(LOG_TAG, "whichEmoji: rightEyeOpenProb = "
-                + face.getIsRightEyeOpenProbability());
+                + face.getIsRightEyeOpenProbability());*/
 
+        Timber.d( "whichEmoji: smilingProb = " + face.getIsSmilingProbability());
 
         boolean smiling = face.getIsSmilingProbability() > SMILING_PROB_THRESHOLD;
 
